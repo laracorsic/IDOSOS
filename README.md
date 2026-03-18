@@ -1,5 +1,7 @@
 # IDOSOS
+Nome do projeto:
 -Bug Hunters
+Integrantes:
 - Lara
 - Ruan
 - Kevin
