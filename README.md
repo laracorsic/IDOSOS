@@ -1,5 +1,5 @@
 # IDOSOS
-Nome do projeto:
+Nome da equipe:
 -Bug Hunters
 
 Integrantes:
