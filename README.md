@@ -1,7 +1,9 @@
 # IDOSOS
 Nome da equipe:
 -Bug Hunters
+
 https://www.figma.com/design/QK0BkbzTW4ljAq64ouULCi/Sem-t%C3%ADtulo?node-id=1-2548&t=2IxoxfMZbNeVTwes-1
+
 Integrantes:
 - Lara
 - Ruan
