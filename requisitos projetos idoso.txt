@@ -1,0 +1,7 @@
+verificar contas a pagar (conta de energia, agua, celular, tv...etc)
+eventos da família (aniversario, passeios, almoço em família, jantar em família, academia)
+consultas medicas (lembretes de data/hora)
+eventos públicos (jogar cartas, bingo)
+verificar estoque de alimentos, produto de limpeza etc (idoso clica nos produtos que estão em falta)
+roupa de cama
+botão de socorro!!! (API do telegram) dispara msg no celular do cuidados/familiar
