@@ -1,0 +1,37 @@
+Eventos:
+
+1.Lazer
+ -passeios(shopping, praça, parque...)
+ -restaurantes e bares
+ -jantar/ almoço em família
+ -clube
+ -viagens
+
+2.Esportes
+ - jogos em geral
+
+3.Atividades Físicas
+ -academia
+ -caminhada...
+
+4.Despesas/ Controle Finanças
+ -CPFL
+ -SAAE
+ -Internet
+ -Celular
+ -fatura, carnês
+
+5.Encontros
+-amigos
+-família
+-outros
+
+6.Compromissos
+-consultas/ exames
+-banco
+
+7.Compras
+-mercado
+-açougue
+-farmácia
+-produtos em geral
