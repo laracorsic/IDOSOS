@@ -70,8 +70,6 @@ A maioria dos aplicativos existentes foi desenhada para adultos acostumados com 
 | 👵 **Idoso (usuário principal)** | Pessoa que precisa de apoio com a rotina de medicamentos e atividades, e que pode ter dificuldade com leitura, escrita, visão ou tecnologia. |
 | 👨‍👩‍👧 **Familiar / responsável** | Pessoa que acompanha e organiza o cuidado de forma prática, mesmo morando longe. Recomenda-se que o familiar crie e configure a conta do idoso. |
 
-> 📎 A persona detalhada está no arquivo `PERSONA_MIQUEIAS.docx` (na raiz do repositório). *(Se quiser, inclua aqui um resumo: nome, idade, rotina, dores e necessidades.)*
-
 ## ✨ Funcionalidades
 
 ### 💊 Remédios
@@ -117,9 +115,6 @@ Companheiro por voz que entende português, abre as telas por comando ("abrir me
 Cinco jogos simples para exercitar memória e atenção: jogo das frutas, jogo da memória, quebra-cabeça, jogo das cores e jogo de cartas.
 
 ## 📋 Requisitos
-
-> Os requisitos abaixo foram levantados a partir dos documentos de especificação dos módulos **Medicamentos**, **Eventos** e **Compras**.
-
 ### Requisitos funcionais
 
 | ID | Requisito | Módulo |
@@ -143,7 +138,6 @@ Cinco jogos simples para exercitar memória e atenção: jogo das frutas, jogo d
 | RF17 | O familiar deve acompanhar o resumo do dia e receber avisos de dose, compras e eventos. | Painel |
 
 ### Requisitos não funcionais
-
 | ID | Requisito |
 | --- | --- |
 | RNF01 | **Acessibilidade:** botões grandes, alto contraste, ajuste do tamanho da fonte (A+ / A−) e modo escuro. |
