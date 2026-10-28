@@ -341,12 +341,6 @@ telegram/     bot principal (ConnectHubBot)
 
 ---
 
-<div align="center">
-
-Feito com 💚 para quem cuida e para quem é cuidado.
-
-</div>
-
 
 | **PASSO 1** | Extrair os Arquivos do Projeto
 Localize o arquivo **.zip** baixado em seu computador (geralmente localizado na pasta Downloads).
@@ -432,3 +426,11 @@ Clique com o botão direito do mouse em qualquer ponto dentro do código do arqu
 Clique na opção **Open with Live Server (ou pressione o atalho Alt + L seguido de Alt + O)**.
 
 O seu navegador de internet padrão abrirá automaticamente a página da aplicação no endereço local (geralmente [http://127.0.0.1:5500/paginainicial.html](http://127.0.0.1:5500/paginainicial.html)).
+
+---
+
+<div align="center">
+
+Feito com 💚 para quem cuida e para quem é cuidado.
+
+</div>
