@@ -203,12 +203,15 @@ Cinco jogos simples para exercitar memória e atenção: jogo das frutas, jogo d
 Mostra como o **idoso** e o **familiar** interagem nos quatro grandes processos: vínculo por QR Code, gestão de remédios, carrinho de compras e eventos/lembretes.
 
 ![Fluxograma do sistema ZELO](docs/fluxograma.png)
+<img width="3422" height="8000" alt="fluxograma" src="https://github.com/user-attachments/assets/2f0e8362-77c9-4c59-99ed-fec8f0ff144e" />
+
 
 ### Diagrama de classes
 
 Representa as principais entidades do domínio (Familiar, Idoso, Remédio, Carrinho de Compra, Evento e Lembrete) e seus relacionamentos.
 
-![Diagrama de classes do ZELO](docs/diagrama-de-classes.png)
+![Diagrama de classes do ZELO](docs/diagrama-de-classes.png)<img width="1536" height="1024" alt="diagrama-de-classes" src="https://github.com/user-attachments/assets/6d3b5f74-e5e5-4295-bb06-ed0c62415394" />
+
 
 ## 🚀 Como executar
 
