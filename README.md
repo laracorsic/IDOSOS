@@ -24,10 +24,9 @@ Projeto desenvolvido pela equipe **Bug Hunters** — alunos do **SENAI**
 8. [Tecnologias](#-tecnologias)
 9. [Arquitetura](#-arquitetura)
 10. [Modelagem (fluxograma e diagrama de classes)](#-modelagem)
-11. [Como executar](#-como-executar)
-12. [Estrutura do repositório](#-estrutura-do-repositório)
-13. [Evoluções futuras](#-evoluções-futuras)
-14. [Equipe](#-equipe)
+11. [Estrutura do repositório](#-estrutura-do-repositório)
+12. [Evoluções futuras](#-evoluções-futuras)
+13. [Equipe](#-equipe)
 
 ---
 
@@ -212,64 +211,6 @@ Representa as principais entidades do domínio (Familiar, Idoso, Remédio, Carri
 
 <img width="1536" height="1024" alt="diagrama-de-classes" src="https://github.com/user-attachments/assets/6d3b5f74-e5e5-4295-bb06-ed0c62415394" />
 
-
-## 🚀 Como executar
-
-### Acesso online
-
-| Parte | Link |
-| --- | --- |
-| Frontend (Vercel) | https://connecthub-frontend-three.vercel.app/ |
-| Backend (Render) | https://connecthub-backend-s06j.onrender.com |
-
-> ℹ️ No plano gratuito do Render, a primeira requisição após um período sem uso pode demorar alguns segundos.
-
-### Executar localmente
-
-**Pré-requisitos:** JDK 21, Maven (ou o `mvnw` incluso), PostgreSQL e os tokens dos bots do Telegram.
-
-**1. Backend**
-
-```bash
-# entre na pasta do backend
-cd connecthub-backend
-
-# defina as variáveis de ambiente (exemplo em Linux/macOS)
-export SPRING_DATASOURCE_URL="jdbc:postgresql://localhost:5432/connecthub"
-export SPRING_DATASOURCE_USERNAME="seu_usuario"
-export SPRING_DATASOURCE_PASSWORD="sua_senha"
-export TELEGRAM_BOT_HUB_TOKEN="..."
-export TELEGRAM_BOT_MED_TOKEN="..."
-export TELEGRAM_BOT_EVENTO_TOKEN="..."
-export TELEGRAM_BOT_COMPRA_TOKEN="..."
-export APP_FRONTEND_URL="http://localhost:5500"
-
-# execute
-./mvnw spring-boot:run
-```
-
-A API ficará disponível em `http://localhost:8080`. As tabelas são criadas automaticamente (`ddl-auto=update`); o arquivo `bd-projetos.sql` do repositório também pode ser usado como base.
-
-**Com Docker:**
-
-```bash
-docker build -t zelo-backend .
-docker run -p 8080:8080 --env-file .env zelo-backend
-```
-
-**2. Frontend**
-
-1. Abra a pasta do frontend no **VS Code** e instale a extensão **Live Server**.
-2. Clique com o botão direito em `paginainicial/paginainicial.html` e escolha **Open with Live Server**.
-3. Não abra o arquivo direto com `file://`, pois o navegador bloqueia as chamadas à API.
-4. Confirme que a constante `API_BASE_URL` aponta para `http://localhost:8080`.
-
-**3. Assistente Zelo (opcional)**
-Configure a variável `ASSISTENTE_IA_CHAVE` (chave da Groq) antes de iniciar o backend. Sem ela, o assistente funciona em "modo acolhedor", com respostas limitadas.
-
-### 🔐 Segurança das credenciais
-
-Nunca grave senhas de banco ou tokens de bots no código ou no repositório. Use sempre **variáveis de ambiente** (no Render e na Vercel, em *Environment Variables*).
 
 ## 📁 Estrutura do repositório
 
