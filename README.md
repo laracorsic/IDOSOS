@@ -11,6 +11,7 @@ Integrantes:
 Descrição:
   Aplicativo que vai garantir socialização entre idosos, amigos e familiares de forma fácil, monitorar para caso de acidentes, lembra-los de compromisso e seus remédios, estimular a fala e memoria e também  fazer com que os idosos marquem uma consulta médica on-line por conta própria por meio de um aplicativo.
 
+segue os links para acessar o projeto:
 
 backend-render
 https://connecthub-backend-s06j.onrender.com
