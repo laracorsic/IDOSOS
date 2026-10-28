@@ -267,18 +267,18 @@ telegram/     bot principal (ConnectHubBot)
 
 | Integrante | Função no projeto | GitHub |
 | --- | --- | --- |
-| **Lara** | Documentação, Analista e Full Stack | [@laracorsic](https://github.com/laracorsic) |
-| **Kevin Correa** | Full Stack | [@kevinacorrea](https://github.com/kevinacorrea) |
-| **Ruan Fernandes da Silva** | Back-end | [@RuanFernandesdaSilva](https://github.com/RuanFernandesdaSilva) |
-| **Maria Isabelle** | Front-end, design | [@mariaisabellecastro](https://github.com/mariaisabellecastro) |
+| **LARA CORSI** | Documentação, Analista e Full Stack | [@laracorsic](https://github.com/laracorsic) |
+| **KEVIN CORREA** | Full Stack | [@kevinacorrea](https://github.com/kevinacorrea) |
+| **RUAN FERNANDES** | Back-end | [@RuanFernandesdaSilva](https://github.com/RuanFernandesdaSilva) |
+| **MARIA ISABELLE** | Front-end, design | [@mariaisabellecastro](https://github.com/mariaisabellecastro) |
 
 ### 🎓 Orientação
 
 | | |
 | --- | --- |
-| **Professor** | Wesley Pecoraro |
-| **Turma** | 2IDS-B |
-| **Instituição** | Faculdade de Tecnologia e Escola SENAI Antonio Adolpho Lobbe |
+| **PROFESSOR** | Wesley Pecoraro |
+| **TURMA** | 2IDS-B |
+| **INSTITUIÇÃO** | Faculdade de Tecnologia e Escola SENAI Antonio Adolpho Lobbe |
 
 ---
 
