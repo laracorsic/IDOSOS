@@ -12,24 +12,6 @@ Projeto desenvolvido pela equipe **Bug Hunters** — alunos do **SENAI**
 
 ---
 
-## 📑 Sumário
-
-1. [Tema](#-tema)
-2. [Contexto e problema](#-contexto-e-problema)
-3. [Objetivos](#-objetivos)
-4. [Público-alvo e persona](#-público-alvo-e-persona)
-5. [Funcionalidades](#-funcionalidades)
-6. [Requisitos](#-requisitos)
-7. [Design](#-design)
-8. [Tecnologias](#-tecnologias)
-9. [Arquitetura](#-arquitetura)
-10. [Modelagem (fluxograma e diagrama de classes)](#-modelagem)
-11. [Estrutura do repositório](#-estrutura-do-repositório)
-12. [Evoluções futuras](#-evoluções-futuras)
-13. [Equipe](#-equipe)
-
----
-
 ## 🎯 Tema
 
 **Tecnologia assistiva para o cuidado e a autonomia da pessoa idosa.**
