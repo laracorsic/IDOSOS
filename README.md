@@ -342,7 +342,7 @@ O seu navegador de internet padrão abrirá automaticamente a página da aplica�
 
 ---
 
-<div align="center">
+<div align="left">
 
 Feito com 💚 para quem cuida e para quem é cuidado.
 
