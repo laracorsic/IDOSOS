@@ -1,4 +1,4 @@
-<div align="center">
+<div align="left">
 
 # 💚 ZELO — Sua saúde nas suas mãos
 
