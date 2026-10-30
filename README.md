@@ -12,7 +12,7 @@ Projeto desenvolvido pela equipe **Bug Hunters** — alunos do **SENAI**
 
 **Tecnologia assistiva para o cuidado e a autonomia da pessoa idosa.**
 
-O **ZELO** é um aplicativo web com interface simplificada, pensado para quem tem pouca familiaridade com tecnologia, dificuldade de leitura, de visão ou de memória. Ele conecta o **idoso** ao seu **familiar responsável** por meio de lembretes, painéis de acompanhamento e notificações via **Telegram**.
+O **ZELO** é um aplicativo web com interface simplificada, pensado para quem tem pouca familiaridade com tecnologia, dificuldade de leitura, de visão ou de memória. Ele conecta o **idoso** ao seu **familiar responsável** por meio de lembretes, painéis de acompanhamento e notificações.
 
 ## 🧩 Contexto e problema
 
@@ -65,7 +65,7 @@ Uma agenda que faz uma pergunta de cada vez: *O que você vai fazer? → Quando 
 
 - Categorias: Lazer, Esportes, Atividades físicas, Finanças, Encontros, Compromissos e Compras.
 - Data, horário e descrição (inclusive **por áudio**).
-- Eventos futuros e anteriores, edição, exclusão com confirmação e **lembretes pelo Telegram**.
+- Eventos futuros e anteriores, edição, exclusão com confirmação e **lembretes pelo aplicativo**.
 
 ### 🛒 Compras
 Uma "lojinha" feita para tocar, não para ler.
@@ -73,7 +73,7 @@ Uma "lojinha" feita para tocar, não para ler.
 - Fluxo: **Ver → Escolher → Quantidade → Carrinho → Enviar**.
 - Três categorias grandes: 🧹 Produtos de Limpeza, 🍎 Alimentos e 📦 Itens.
 - Produtos apresentados com imagens e ícones; descrição opcional por **áudio**.
-- O familiar recebe a lista organizada no Telegram.
+- O familiar recebe a lista organizada no aplicativo.
 - Histórico de compras e opção de repetir uma compra anterior.
 
 ### 🗣️ Zelo, o assistente com IA
@@ -86,7 +86,7 @@ Companheiro por voz que entende português, abre as telas por comando ("abrir me
 ### 👨‍👩‍👧 Painel da família
 - Resumo do dia (remédios tomados, pendentes e compromissos).
 - Cadastro de remédios (com cor da gaveta), lembretes e compromissos.
-- Avisos na hora (sininho e Telegram).
+- Avisos na hora (sininho e Notificações).
 - **Vínculo por QR Code:** o idoso mostra o código, o familiar escaneia e as contas ficam conectadas.
 
 ### 🎮 Jogos
@@ -107,9 +107,9 @@ Cinco jogos simples para exercitar memória e atenção: jogo das frutas, jogo d
 | RF08 | O sistema deve suportar tratamentos com data final e de uso contínuo. | Remédios |
 | RF09 | O sistema deve manter o histórico de cada dose. | Remédios |
 | RF10 | O usuário deve poder criar, listar, editar e excluir eventos por categoria, com data, horário e descrição (texto ou áudio). | Eventos |
-| RF11 | O sistema deve enviar lembretes de eventos pelo Telegram. | Eventos |
+| RF11 | O sistema deve enviar lembretes de eventos pelo próprio aplicativo. | Eventos |
 | RF12 | O idoso deve poder montar um carrinho escolhendo produtos por imagem, com quantidade e descrição opcional por áudio. | Compras |
-| RF13 | O sistema deve enviar a lista de compras ao familiar pelo Telegram. | Compras |
+| RF13 | O sistema deve enviar a lista de compras ao familiar pelo aplicativo. | Compras |
 | RF14 | O sistema deve manter histórico de compras e permitir repetir uma compra. | Compras |
 | RF15 | O sistema deve exibir botões de emergência (190, 192, 193 e familiar) em todas as telas. | Ajuda |
 | RF16 | O assistente Zelo deve responder a comandos de voz e navegar entre as telas. | Assistente |
@@ -143,7 +143,7 @@ Cinco jogos simples para exercitar memória e atenção: jogo das frutas, jogo d
 | **Frontend** | HTML5, CSS3 e JavaScript |
 | **Backend** | Java 21, Spring Boot 3.2.5 (Spring Web, Spring Data JPA/Hibernate, Bean Validation), Maven |
 | **Banco de dados** | PostgreSQL (hospedado no Render); H2 para testes |
-| **Notificações** | Telegram Bot API (`telegrambots-spring-boot-starter` 6.8.0), com 4 bots: Hub, Medicamentos, Eventos e Compras |
+| **Notificações** |Bot API (`telegrambots-spring-boot-starter` 6.8.0), com 4 bots: Hub, Medicamentos, Eventos e Compras |
 | **Vínculo por QR Code** | ZXing (Google) |
 | **Assistente de IA** | Groq (modelo de linguagem), voz do navegador (reconhecimento e síntese de fala) |
 | **Infraestrutura** | Docker (build multi-stage), Render (backend e banco), Vercel (frontend) |
