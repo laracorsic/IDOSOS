@@ -6,10 +6,6 @@
 
 Projeto desenvolvido pela equipe **Bug Hunters** — alunos do **SENAI**
 
-[🌐 Acessar o sistema](https://connecthub-frontend-three.vercel.app/) · [⚙️ API (backend)](https://connecthub-backend-s06j.onrender.com)
-
-</div>
-
 ---
 
 ## 🎯 Tema
