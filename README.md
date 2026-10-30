@@ -256,89 +256,83 @@ telegram/     bot principal (ConnectHubBot)
 
 
 | **PASSO 1** | Extrair os Arquivos do Projeto
-Localize o arquivo **.zip** baixado em seu computador (geralmente localizado na pasta Downloads).
+- Localize o arquivo **.zip** baixado em seu computador (geralmente localizado na pasta Downloads).
 
-Clique com o botão direito do mouse sobre o arquivo compactado e selecione **Extrair Tudo...** (no Windows) ou **Extrair Aqui**.
+- Clique com o botão direito do mouse sobre o arquivo compactado e selecione **Extrair Tudo...** (no Windows) ou **Extrair Aqui**.
 
-Aguarde a extração terminar. Uma nova pasta descompactada será criada no mesmo local contendo os arquivos do backend e do frontend.
+- Aguarde a extração terminar. Uma nova pasta descompactada será criada no mesmo local contendo os arquivos do backend e do frontend.
 
 | **PASSO 2** |  Abrir a Pasta do Backend no IntelliJ IDEA
-Abra o **IntelliJ IDEA**.
+- Abra o **IntelliJ IDEA**.
 
-Na tela inicial do programa, clique no botão **Open** (ou vá no menu superior em File > Open...).
+- Na tela inicial do programa, clique no botão **Open** (ou vá no menu superior em File > Open...).
 
-Navegue até a pasta que você extraiu no Passo **1**.
+- Navegue até a pasta que você extraiu no Passo **1**.
 
-Selecione a pasta do backend chamada **connecthub-backend-0939655e854e480e5a86a375588b2938854e8648** (Atenção: selecione a pasta descompactada, não o arquivo .zip).
+- Selecione a pasta do backend chamada **connecthub-backend-0939655e854e480e5a86a375588b2938854e8648** (Atenção: selecione a pasta descompactada, não o arquivo .zip).
 
-Clique em **OK / Open**. Aguarde alguns instantes enquanto o IntelliJ carrega a estrutura do projeto e baixa as dependências (Maven ou Gradle).
+- Clique em **OK / Open**. Aguarde alguns instantes enquanto o IntelliJ carrega a estrutura do projeto e baixa as dependências (Maven ou Gradle).
 
 | **PASSO 3** | Configurar a Inicialização do Banco de Dados
-No painel de navegação à esquerda do IntelliJ (Project Explorer), expanda as pastas no seguinte caminho:**src ➔ main ➔ resources ➔ application.properties**
+- No painel de navegação à esquerda do IntelliJ (Project Explorer), expanda as pastas no seguinte caminho:**src ➔ main ➔ resources ➔ application.properties**
 
-Clique duas vezes no arquivo **application.properties** para abri-lo no editor.
+- Clique duas vezes no arquivo **application.properties** para abri-lo no editor.
 
-Localize a linha que contém **spring.sql.init.mode** e altere a instrução para:
-
+- Localize a linha que contém **spring.sql.init.mode** e altere a instrução para:
 **Properties
 spring.sql.init.mode=always**
-
-**Objetivo:** Essa configuração garante que o Spring crie as tabelas e popule o banco de dados com os dados iniciais ao rodar a aplicação pela primeira vez.
+- **Objetivo:** Essa configuração garante que o Spring crie as tabelas e popule o banco de dados com os dados iniciais ao rodar a aplicação pela primeira vez.
 
 | **PASSO 4** |  Executar a Aplicação Backend
-No painel de arquivos do IntelliJ (lado esquerdo), navegue até a classe principal do sistema:**src ➔ main ➔ java ➔ com.connecthub... ➔ ConnectHubBackendApplication.java** (ou o arquivo .java com o método de inicialização).
+- No painel de arquivos do IntelliJ (lado esquerdo), navegue até a classe principal do sistema:**src ➔ main ➔ java ➔ com.connecthub... ➔ ConnectHubBackendApplication.java** (ou o arquivo .java com o método de inicialização).
 
-Abra o arquivo no editor.
+- Abra o arquivo no editor.
 
-Localize a linha que contém **public static void main(String[] args)**.
+- Localize a linha que contém **public static void main(String[] args)**.
 
-Clique no ícone de **play verde (▶️)** localizado na margem esquerda (ao lado do número da linha) ou no canto superior direito do IntelliJ e selecione **Run...**.
+- Clique no ícone de **play verde (▶️)** localizado na margem esquerda (ao lado do número da linha) ou no canto superior direito do IntelliJ e selecione **Run...**.
 
-Aguarde o console exibir as mensagens de inicialização até confirmar que a aplicação está rodando.
+- Aguarde o console exibir as mensagens de inicialização até confirmar que a aplicação está rodando.
 
 | **PASSO 5** |  Alterar a Propriedade do Banco para Evitar Reinicializações
-Com o backend já em execução e o banco populado, retorne ao arquivo **application.properties (src/main/resources/application.properties)**.
+- Com o backend já em execução e o banco populado, retorne ao arquivo **application.properties (src/main/resources/application.properties)**.
 
-Altere novamente a linha de configuração para:
-
+- Altere novamente a linha de configuração para:
 **Properties
 spring.sql.init.mode=never**
-O IntelliJ salva a alteração automaticamente.
-
-**Objetivo:** Mudar para never evita que a aplicação tente recriar ou duplicar a base de dados nas próximas vezes em que for executada.
+- O IntelliJ salva a alteração automaticamente.
+- **Objetivo:** Mudar para never evita que a aplicação tente recriar ou duplicar a base de dados nas próximas vezes em que for executada.
 
 | **PASSO 6** |  Abrir o Frontend no Visual Studio Code (VS Code)
-Abra o Visual Studio Code.
+- Abra o Visual Studio Code.
 
-No menu superior, clique em **File (Arquivo) ➔ Open Folder... (Abrir Pasta...)** ou utilize o atalho **Ctrl + K seguido de Ctrl + O (no Windows) ou Cmd + O (no Mac)**.
+- No menu superior, clique em **File (Arquivo) ➔ Open Folder... (Abrir Pasta...)** ou utilize o atalho **Ctrl + K seguido de Ctrl + O (no Windows) ou Cmd + O (no Mac)**.
 
-Navegue até a pasta raiz extraída no Passo 1.
+- Navegue até a pasta raiz extraída no Passo 1.
 
-Selecione a pasta do frontend chamada **Idoso 23.10**.
+- Selecione a pasta do frontend chamada **Idoso 23.10**.
 
-Clique no botão **Selecionar Pasta (Select Folder)**.
+- Clique no botão **Selecionar Pasta (Select Folder)**.
 
 | **PASSO 7** |  Verificar e Instalar a Extensão Live Server
-No VS Code, abra o painel de extensões clicando no ícone de quatro quadrados no menu lateral esquerdo **(ou pressione Ctrl + Shift + X)**.
+- No VS Code, abra o painel de extensões clicando no ícone de quatro quadrados no menu lateral esquerdo **(ou pressione Ctrl + Shift + X)**.
 
-Na barra de busca na parte superior, digite **Live Server**.
+- Na barra de busca na parte superior, digite **Live Server**.
 
-Verifique a instalação:
+- Verifique a instalação. Se já estiver instalada e ativa, passe para o próximo passo.
 
-Se já estiver instalada e ativa, passe para o próximo passo.
-
-Caso não esteja instalada, clique no botão azul **Install** e aguarde o término do processo.
+- Caso não esteja instalada, clique no botão azul **Install** e aguarde o término do processo.
 
 | **PASSO 8** |  Executar o Frontend com o Live Server
-Volte ao explorador de arquivos do VS Code clicando no ícone de documentos no topo do menu esquerdo **(ou pressione Ctrl + Shift + E)**.
+- Volte ao explorador de arquivos do VS Code clicando no ícone de documentos no topo do menu esquerdo **(ou pressione Ctrl + Shift + E)**.
 
-Clique no arquivo **paginainicial.html** para abri-lo na tela.
+- Clique no arquivo **paginainicial.html** para abri-lo na tela.
 
-Clique com o botão direito do mouse em qualquer ponto dentro do código do arquivo ou sobre o nome do arquivo na barra lateral.
+- Clique com o botão direito do mouse em qualquer ponto dentro do código do arquivo ou sobre o nome do arquivo na barra lateral.
 
-Clique na opção **Open with Live Server (ou pressione o atalho Alt + L seguido de Alt + O)**.
+- Clique na opção **Open with Live Server (ou pressione o atalho Alt + L seguido de Alt + O)**.
 
-O seu navegador de internet padrão abrirá automaticamente a página da aplicação no endereço local (geralmente [http://127.0.0.1:5500/paginainicial.html](http://127.0.0.1:5500/paginainicial.html)).
+- O seu navegador de internet padrão abrirá automaticamente a página da aplicação no endereço local (geralmente [http://127.0.0.1:5500/paginainicial.html](http://127.0.0.1:5500/paginainicial.html)).
 
 ---
 
