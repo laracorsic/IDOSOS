@@ -4,7 +4,7 @@
 
 **Aplicativo web acessível para idosos tomarem seus remédios, organizarem a rotina, pedirem compras e se manterem conectados à família.**
 
-Projeto desenvolvido pela equipe **Bug Hunters** — alunos do **SENAI**
+Projeto desenvolvido pela equipe **Zelo** — alunos do **SENAI**
 
 [🌐 Acessar o sistema](https://connecthub-frontend-three.vercel.app/) · [⚙️ API (backend)](https://connecthub-backend-s06j.onrender.com)
 
