@@ -6,7 +6,7 @@
 
 Projeto desenvolvido pela equipe **Zelo** — alunos do **SENAI**
 
-[🌐 Acessar o sistema](https://zelo-frontend.onrender.com/) · [⚙️ API (backend)](https://connecthub-backend-s06j.onrender.com)
+[🌐 Acessar o sistema](https://zelo-frontend.onrender.com/) 
 
 </div>
 
