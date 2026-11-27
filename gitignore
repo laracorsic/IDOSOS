@@ -1,0 +1,20 @@
+# Sistema e IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Build Java
+backend-intellij/target/
+
+# Banco local H2
+backend-intellij/connecthub-local.mv.db
+backend-intellij/connecthub-local.lock.db
+backend-intellij/connecthub-local.trace.db
+
+# Segredos e ambiente
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
