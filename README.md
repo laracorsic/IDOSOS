@@ -12,22 +12,46 @@ Projeto desenvolvido pela equipe **Zelo** — alunos do **SENAI**
 
 ---
 
+## 📦 Pacote consolidado do projeto
+
+Este repositório também reúne a versão consolidada mais recente do ZELO, migrada de [`kevinacorrea/zelo-projeto-integrado`](https://github.com/kevinacorrea/zelo-projeto-integrado). Para preservar os materiais e versões anteriores já existentes neste repositório, o código foi mantido em dois arquivos compactados na raiz:
+
+| Arquivo | Conteúdo |
+| --- | --- |
+| `frontend-source.zip` | Frontend estático (HTML, CSS e JavaScript), telas do idoso e familiar, jogos, loja e assistente. |
+| `backend-source.zip` | API Spring Boot, Maven Wrapper, persistência local H2 e documentação para execução no IntelliJ. |
+| `Dockerfile` e `render.yaml` | Build e configuração de implantação do backend. As variáveis marcadas como `sync: false` devem ser configuradas no ambiente de deploy. |
+| `NOTAS_IMPLEMENTACAO.md` e `REVISAO_FINAL.md` | Histórico das alterações funcionais, observações de segurança e verificações feitas na origem. |
+
+Os arquivos compactados contêm o código completo. Extraia-os para pastas separadas antes de executar; não é necessário extrair sobrescrevendo os materiais antigos do repositório:
+
+```bash
+mkdir -p backend-intellij frontend-vscode
+unzip -q backend-source.zip -d backend-intellij
+unzip -q frontend-source.zip -d frontend-vscode
+```
+
+Consulte também as instruções incluídas nos próprios pacotes: `backend-intellij/COMO_EXECUTAR_INTELLIJ.md` e `frontend-vscode/COMO_EXECUTAR_VSCODE.md`.
+
+---
+
 ## 📑 Sumário
 
-1. [Tema](#-tema)
-2. [Contexto e problema](#-contexto-e-problema)
-3. [Objetivos](#-objetivos)
-4. [Público-alvo e persona](#-público-alvo-e-persona)
-5. [Funcionalidades](#-funcionalidades)
-6. [Requisitos](#-requisitos)
-7. [Design](#-design)
-8. [Tecnologias](#-tecnologias)
-9. [Arquitetura](#-arquitetura)
-10. [Modelagem (fluxograma e diagrama de classes)](#-modelagem)
-11. [Como executar](#-como-executar)
-12. [Estrutura do repositório](#-estrutura-do-repositório)
-13. [Evoluções futuras](#-evoluções-futuras)
-14. [Equipe](#-equipe)
+1. [Pacote consolidado do projeto](#-pacote-consolidado-do-projeto)
+2. [Tema](#-tema)
+3. [Contexto e problema](#-contexto-e-problema)
+4. [Objetivos](#-objetivos)
+5. [Público-alvo e persona](#-público-alvo-e-persona)
+6. [Funcionalidades](#-funcionalidades)
+7. [Requisitos](#-requisitos)
+8. [Design](#-design)
+9. [Tecnologias](#-tecnologias)
+10. [Arquitetura](#-arquitetura)
+11. [Modelagem (fluxograma e diagrama de classes)](#-modelagem)
+12. [Como executar](#-como-executar)
+13. [Estrutura do repositório](#-estrutura-do-repositório)
+14. [Evoluções futuras](#-evoluções-futuras)
+15. [Equipe](#-equipe)
 
 ---
 
@@ -202,13 +226,13 @@ Cinco jogos simples para exercitar memória e atenção: jogo das frutas, jogo d
 
 Mostra como o **idoso** e o **familiar** interagem nos quatro grandes processos: vínculo por QR Code, gestão de remédios, carrinho de compras e eventos/lembretes.
 
-![Fluxograma do sistema ZELO](docs/fluxograma.png)
+![Fluxograma do sistema ZELO](<fluxograma.png>)
 
 ### Diagrama de classes
 
 Representa as principais entidades do domínio (Familiar, Idoso, Remédio, Carrinho de Compra, Evento e Lembrete) e seus relacionamentos.
 
-![Diagrama de classes do ZELO](docs/diagrama-de-classes.png)
+![Diagrama de classes do ZELO](<Diagrama de Classes Familiar e Idoso.png>)
 
 ## 🚀 Como executar
 
@@ -216,49 +240,40 @@ Representa as principais entidades do domínio (Familiar, Idoso, Remédio, Carri
 
 | Parte | Link |
 | --- | --- |
-| Frontend (Vercel) | https://connecthub-frontend-three.vercel.app/ |
-| Backend (Render) | https://connecthub-backend-s06j.onrender.com |
+| Frontend (endereço indicado pelo projeto) | https://zelo-frontend.onrender.com/ |
+| Backend | URL gerada pelo Render conforme a implantação descrita em `render.yaml`. |
 
-> ℹ️ No plano gratuito do Render, a primeira requisição após um período sem uso pode demorar alguns segundos.
+> ℹ️ Confirme que a implantação continua ativa antes de distribuir o link. No plano gratuito do Render, a primeira requisição após um período sem uso pode demorar alguns segundos.
 
 ### Executar localmente
 
-**Pré-requisitos:** JDK 21, Maven (ou o `mvnw` incluso), e PostgreSQL.
+**Pré-requisitos:** Java 21, VS Code e a extensão Live Server. O Maven Wrapper está incluído no pacote do backend; PostgreSQL não é necessário para desenvolvimento local.
 
-**1. Backend**
+**1. Extraia os pacotes** conforme as instruções da seção [Pacote consolidado do projeto](#-pacote-consolidado-do-projeto).
+
+**2. Inicie o backend** a partir da pasta extraída:
 
 ```bash
-# entre na pasta do backend
-cd connecthub-backend
-
-# defina as variáveis de ambiente (exemplo em Linux/macOS)
-export SPRING_DATASOURCE_URL="jdbc:postgresql://localhost:5432/connecthub"
-export SPRING_DATASOURCE_USERNAME="seu_usuario"
-export SPRING_DATASOURCE_PASSWORD="sua_senha"
-export APP_FRONTEND_URL="http://localhost:5500"
-
-# execute
-./mvnw spring-boot:run
+cd backend-intellij
+SPRING_PROFILES_ACTIVE=local ./mvnw spring-boot:run
 ```
 
-A API ficará disponível em `http://localhost:8080`. As tabelas são criadas automaticamente (`ddl-auto=update`); o arquivo `bd-projetos.sql` do repositório também pode ser usado como base.
+No Windows, use `mvnw.cmd`. O perfil `local` usa H2 em arquivo e a API fica disponível em `http://localhost:8080`. O arquivo local do banco não deve ser versionado.
 
-**Com Docker:**
+**3. Inicie o frontend:** abra `frontend-vscode` no VS Code, clique com o botão direito em `paginainicial/paginainicial.html` e escolha **Open with Live Server**. Não abra o arquivo diretamente com `file://`. A URL da API está em `frontend-vscode/assets/js/api-config.js` (`window.ZELO_API_BASE_URL`); para desenvolvimento local, deve apontar para `http://localhost:8080`.
+
+**Assistente Zelo (opcional):** sem `ASSISTENTE_IA_CHAVE`, o backend continua funcionando em modo local limitado. Para respostas generativas, configure uma chave válida somente como variável de ambiente/segredo do backend; nunca a grave nos arquivos do projeto.
+
+**Docker:** o `Dockerfile` na raiz constrói o backend a partir de `backend-source.zip`:
 
 ```bash
 docker build -t zelo-backend .
-docker run -p 8080:8080 --env-file .env zelo-backend
+# Com as variáveis de banco definidas no ambiente local:
+docker run -p 8080:8080 -e SPRING_DATASOURCE_URL \
+  -e SPRING_DATASOURCE_USERNAME -e SPRING_DATASOURCE_PASSWORD zelo-backend
 ```
 
-**2. Frontend**
-
-1. Abra a pasta do frontend no **VS Code** e instale a extensão **Live Server**.
-2. Clique com o botão direito em `paginainicial/paginainicial.html` e escolha **Open with Live Server**.
-3. Não abra o arquivo direto com `file://`, pois o navegador bloqueia as chamadas à API.
-4. Confirme que a constante `API_BASE_URL` aponta para `http://localhost:8080`.
-
-**3. Assistente Zelo (opcional)**
-Configure a variável `ASSISTENTE_IA_CHAVE` (chave da Groq) antes de iniciar o backend. Sem ela, o assistente funciona em "modo acolhedor", com respostas limitadas.
+Para produção, use banco persistente, HTTPS, cookies seguros e configure as variáveis indicadas em `render.yaml`. Veja `NOTAS_IMPLEMENTACAO.md` para limitações e recomendações adicionais de sessão, Web Push e armazenamento.
 
 ### 🔐 Segurança das credenciais
 
@@ -268,22 +283,33 @@ Nunca grave senhas de banco ou chaves de API no código ou no repositório. Use 
 
 ```
 IDOSOS/
-├── projeto-TCC/                 # versões organizadas do projeto
-├── connecthub-backend-*.zip     # backend (Spring Boot)
-├── connecthub-frontend-*.zip    # frontend publicado na Vercel
-├── Idoso 23.10.zip              # frontend estático (HTML/CSS/JS)
-├── ZELO - Landing page.html     # página de apresentação do produto
-├── bd-projetos.sql              # script do banco de dados
-├── PERSONA_MIQUEIAS.docx        # persona
-├── User Stories.docx            # histórias de usuário
-├── Logo Equipe.png              # identidade visual da equipe
-├── docs/
-│   ├── fluxograma.png           # fluxograma do sistema
-│   └── diagrama-de-classes.png  # diagrama de classes
+├── .gitignore                    # exclusão de build, banco local e segredos
+├── backend-source.zip           # backend consolidado (Spring Boot)
+├── frontend-source.zip          # frontend consolidado (HTML/CSS/JavaScript)
+├── Dockerfile                   # imagem do backend a partir do ZIP
+├── render.yaml                  # configuração de implantação Render
+├── NOTAS_IMPLEMENTACAO.md       # notas da revisão funcional e implantação
+├── REVISAO_FINAL.md             # correções e verificações da origem
+├── projeto-TCC/
+│   └── 18_09_2026.zip           # pacote anterior do projeto
+├── Projeto-integrado-visual-final-corrigido (2).zip
+├── frontend-vscodefinal.zip     # versões anteriores/materiais de referência
+├── loja-idosos-demo (2).zip
+├── ZELO — Landing Page.html     # página de apresentação
+├── ZELO_Roteiro_de_Pitches.pdf
+├── ZELO_apresentação.pdf
+├── Diagrama de Classes Familiar e Idoso.png
+├── fluxograma.png
+├── landingPageZelo.png
+├── Logo Equipe.png
+├── PERSONA_MIQUEIAS.docx
+├── link_landingpage.txt
 └── README.md
 ```
 
-**Organização do frontend (por tela):**
+Os diretórios executáveis `backend-intellij/` e `frontend-vscode/` são criados ao extrair os dois pacotes principais; eles não são duplicados como pastas na raiz do Git.
+
+**Organização do frontend após extrair `frontend-source.zip` (por tela):**
 
 ```
 paginainicial/      entrarcomo/        entraridoso/       entrarfamiliar/
@@ -293,7 +319,7 @@ medicoidoso/        paginasocorro/     jogoidoso/         vinculo/
 assistente/         fmlamgsidoso/      bughunters/ (sobre nós e contato)
 ```
 
-**Organização do backend (`com.auth.simpleauth`):**
+**Organização do backend após extrair `backend-source.zip` (`com.auth.simpleauth`):**
 
 ```
 controller/   REST controllers
