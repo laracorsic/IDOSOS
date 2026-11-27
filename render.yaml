@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: zelo-backend
+    runtime: docker
+    plan: free
+    healthCheckPath: /assistente/status
+    envVars:
+      - key: APP_FRONTEND_URL
+        sync: false
+      - key: SPRING_DATASOURCE_URL
+        sync: false
+      - key: SPRING_DATASOURCE_USERNAME
+        sync: false
+      - key: SPRING_DATASOURCE_PASSWORD
+        sync: false
+      - key: SESSION_COOKIE_SAME_SITE
+        value: None
+      - key: SESSION_COOKIE_SECURE
+        value: "true"
+      - key: SESSION_TIMEOUT
+        value: 30d
+      - key: SESSION_COOKIE_MAX_AGE
+        value: 30d
+      - key: APP_TIMEZONE
+        value: America/Sao_Paulo
+      - key: ASSISTENTE_IA_CHAVE
+        sync: false
+      - key: ASSISTENTE_IA_MODELO
+        value: openai/gpt-oss-120b
